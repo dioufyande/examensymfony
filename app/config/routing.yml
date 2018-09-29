@@ -1,0 +1,8 @@
+examen.examen:
+    resource: "@Examen_ExamenBundle/Controller/"
+    type:     annotation
+    prefix:   /mem
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
