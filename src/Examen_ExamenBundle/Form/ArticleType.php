@@ -14,7 +14,7 @@ class ArticleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('titre')->add('auteur')->add('categorieArticle')->add('etatPublication')->add('dateParution')
-            ->add('image', FileType::class, array('label' => 'Image (png, jpeg)'));
+            ->add('image');
     }/**
      * {@inheritdoc}
      */

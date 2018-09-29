@@ -46,14 +46,8 @@ class ArticleController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            /**
-             * @var UploadedFile $File
-             *
-             */
-            $file = $article->getImage();
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-            $file->move($this->getParameter('image_directory'), $fileName);
-            $article->setPhoto($fileName);
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($article);
             $em->flush();
